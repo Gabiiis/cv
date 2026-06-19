@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriela Vieira dos Santos</title>
+  <meta name="description" content="Gabriela Vieira dos Santos · Doutoranda em Ciências Contábeis (UFSC). Pesquisa a digitalização da governança tributária, a automação fiscal e seus efeitos sobre as organizações e a profissão contábil.">
+  <meta name="author" content="Gabriela Vieira dos Santos">
+  <link rel="canonical" href="https://gabrielavs.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Gabriela Vieira dos Santos">
+  <meta property="og:description" content="Doutoranda em Ciências Contábeis (UFSC).">
+  <meta property="og:url" content="https://gabrielavs.github.io/">
+  <meta property="og:image" content="https://gabrielavs.github.io/assets/foto.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gabriela Vieira dos Santos",
+    "givenName": "Gabriela",
+    "familyName": "Vieira dos Santos",
+    "url": "https://gabrielavs.github.io/",
+    "image": "https://gabrielavs.github.io/assets/foto.jpg",
+    "email": "mailto:gabriela.santos@posgrad.ufsc.br",
+    "jobTitle": "Doutoranda em Ciências Contábeis",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Universidade Federal de Santa Catarina" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidade Federal da Bahia" }
+    ],
+    "knowsAbout": [
+      "Governança tributária", "Automação fiscal", "Gestão e uso da Informação tributária",
+      "Reforma Tributária do Consumo", "Ensino da contabilidade"
+    ],
+    "sameAs": [
+      "https://orcid.org/0000-0003-4603-1075",
+      "http://lattes.cnpq.br/4222571811813236"
+    ],
+    "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0000-0003-4603-1075" }
+  }
+  </script>
+
+  <script>
+    (function () {
+      try {
+        var u = '';
+        try { u = (new URLSearchParams(location.search)).get('lang') || location.hash.replace('#', ''); } catch (e) {}
+        var l = (u === 'en' || u === 'pt') ? u : localStorage.getItem('gvs-lang');
+        if (l === 'en' || l === 'pt') {
+          document.documentElement.setAttribute('data-lang', l);
+          document.documentElement.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --bg:        #FBFAF8;
+      --surface:  #FFFFFF;
+      --text:     #1A1A18;
+      --muted:    #5F5C56;
+      --faint:    #8E8B84;
+      --accent:   #1F5BC4;
+      --accent-soft: #EEF2FB;
+      --border:   #EAE7DF;
+      --rule:     #F0EDE6;
+      --ring:     rgba(31,91,196,0.16);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:        #100F0E;
+        --surface:  #18171501;
+        --surface:  #1A1916;
+        --text:     #EDEAE3;
+        --muted:    #A8A49C;
+        --faint:    #77746C;
+        --accent:   #7FA9F0;
+        --accent-soft: #1B2436;
+        --border:   #2A2824;
+        --rule:     #221F1B;
+        --ring:     rgba(127,169,240,0.22);
+      }
+    }
+
+    html { -webkit-text-size-adjust: 100%; }
+    html[data-lang="en"] [lang="pt"] { display: none !important; }
+    html[data-lang="pt"] [lang="en"] { display: none !important; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 30px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page { max-width: 900px; margin: 0 auto; padding: 5.5rem 2rem 6rem; }
+
+    /* ── Seletor de idioma ───────────────────── */
+    .langtoggle {
+      position: fixed; top: 1.15rem; right: 1.15rem;
+      display: flex; gap: 2px; padding: 3px;
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 9px; z-index: 30;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .langtoggle button {
+      font: inherit; letter-spacing: 0.02em; border: none;
+      background: transparent; color: var(--faint);
+      padding: 0.3rem 0.62rem; border-radius: 6px; cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+    .langtoggle button:hover { color: var(--text); }
+
+    /* ── Hero ────────────────────────────────── */
+    .hero { display: flex; flex-direction: row; align-items: center; gap: 2.25rem; }
+    .hero > div { flex: 1; min-width: 0; }
+    .avatar {
+      width: 132px; height: 132px; flex-shrink: 0;
+      border-radius: 50%; object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: 0 0 0 5px var(--surface), 0 8px 24px -10px rgba(0,0,0,0.22);
+    }
+    .name {
+      font-family: var(--serif);
+      font-size: 2.75rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.16;
+      margin-bottom: 0.45rem;
+      text-wrap: balance;
+    }
+    .role { font-size: 0.97rem; color: var(--muted); line-height: 1.5; }
+    .role strong { color: var(--text); font-weight: 500; }
+
+    .intro {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      margin-top: 1.9rem;
+      letter-spacing: -0.002em;
+      max-width: 100%;
+      text-align: justify;
+      hyphens: auto;
+    }
+    .intro .hl { color: var(--muted); }
+
+    /* ── Bloco de currículo ──────────────────── */
+    .cv {
+      margin-top: 1.9rem;
+      padding: 0.7rem 0.7rem 0.7rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 0.9rem; flex-wrap: wrap;
+    }
+    .cv-label {
+      font-size: 0.9rem; font-weight: 500; color: var(--text);
+      display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;
+    }
+    .cv-label .desc { font-size: 0.82rem; font-weight: 400; color: var(--faint); }
+    .cv-btns { display: flex; gap: 0.4rem; }
+
+    .btn {
+      font-family: var(--sans);
+      font-size: 0.85rem; font-weight: 500;
+      padding: 0.42rem 0.9rem; border-radius: 8px;
+      text-decoration: none; cursor: pointer;
+      border: 1px solid transparent;
+      transition: transform 0.12s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      white-space: nowrap;
+    }
+    .btn.primary { background: var(--accent); color: #fff; box-shadow: 0 1px 2px var(--ring); }
+    .btn.primary:hover { box-shadow: 0 4px 14px -4px var(--ring); transform: translateY(-1px); }
+    .btn.ghost { background: transparent; color: var(--text); border-color: var(--border); }
+    .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+    @media (prefers-color-scheme: dark) { .btn.primary { color: #0E1117; } }
+
+    /* ── Links de perfil ─────────────────────── */
+    .profiles {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 0.55rem;
+      margin-top: 1.4rem;
+    }
+    .profiles a {
+      font-size: 0.86rem; font-weight: 450;
+      color: var(--muted); text-decoration: none;
+      padding: 0.32rem 0.8rem;
+      border: 1px solid var(--border); border-radius: 999px;
+      transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+    .profiles a:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+    /* ── Seções ──────────────────────────────── */
+    .section { margin-top: 3.2rem; scroll-margin-top: 1.5rem; }
+    /* ── Menu superior ───────────────────── */
+    .topnav {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 0 0.05rem;
+      padding-bottom: 1.4rem;
+      margin-bottom: 2.6rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.84rem;
+    }
+    .topnav a {
+      color: var(--muted); text-decoration: none; font-weight: 500;
+      padding: 0.32rem 0.7rem; border-radius: 6px;
+      transition: color 0.18s ease, background 0.18s ease;
+    }
+    .topnav a:first-child { padding-left: 0; }
+    .topnav a:hover { color: var(--accent); background: var(--accent-soft); }
+    .topnav .sep {
+      width: 3px; height: 3px; border-radius: 50%;
+      background: var(--border); margin: 0 0.1rem; flex-shrink: 0;
+    }
+
+    /* ── (legado) Navegação no hero ────────── */
+    .nav {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+      margin-top: 1.7rem; padding-bottom: 0.1rem;
+    }
+    .nav a {
+      font-size: 0.9rem; font-weight: 500; color: var(--accent);
+      text-decoration: none; transition: opacity 0.18s ease;
+    }
+    .nav a:hover { opacity: 0.62; }
+    .kicker {
+      font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--faint);
+      margin-bottom: 0.7rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .kicker::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+    .section p.body { font-size: 0.98rem; color: var(--text); max-width: 100%; text-align: justify; hyphens: auto; line-height: 1.6; }
+    .subhead {
+      font-size: 0.82rem; font-weight: 600; color: var(--muted);
+      margin-top: 1.6rem; margin-bottom: 0.7rem;
+    }
+    .lines { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; max-width: 100%; }
+    .lines li {
+      position: relative; padding-left: 1.1rem;
+      font-size: 0.97rem; color: var(--text); line-height: 1.4;
+    }
+    .lines li::before {
+      content: ""; position: absolute; left: 0; top: 0.6em;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+    }
+    .more {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      margin-top: 0.85rem;
+      font-size: 0.9rem; font-weight: 500; color: var(--accent);
+      text-decoration: none;
+    }
+    .more .arr { transition: transform 0.18s ease; }
+    .more:hover .arr { transform: translateX(3px); }
+    .more.muted { color: var(--muted); }
+
+    /* ── Tópicos (parágrafos com lead em negrito) ── */
+    .topics { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-top: 0.9rem; max-width: 100%; }
+    .topics li {
+      position: relative; padding-left: 1.1rem;
+      font-size: 0.97rem; color: var(--text); line-height: 1.55;
+      text-align: justify; hyphens: auto;
+    }
+    .topics li::before {
+      content: ""; position: absolute; left: 0; top: 0.65em;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+    }
+    .topics li strong { font-weight: 600; color: var(--text); }
+
+    /* ── Materiais e Atividades ──────────────── */
+    .mat-list { list-style: none; margin-top: 0.4rem; }
+    .mat {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 1rem; padding: 0.95rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .mat:last-child { border-bottom: none; }
+    .mat-main { display: flex; flex-direction: column; gap: 0.18rem; min-width: 0; }
+    .mat-title { font-size: 0.98rem; font-weight: 500; color: var(--text); line-height: 1.4; }
+    .mat-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.45; }
+    .mat-tag {
+      flex-shrink: 0; font-size: 0.72rem; font-weight: 500;
+      color: var(--muted); background: var(--accent-soft);
+      border: 1px solid var(--border); border-radius: 999px;
+      padding: 0.18rem 0.62rem; white-space: nowrap; margin-top: 0.1rem;
+    }
+
+    /* ── Contato ─────────────────────────────── */
+    .contact-list { margin-top: 0.3rem; }
+    .contact-row {
+      display: grid; grid-template-columns: 6.5rem 1fr;
+      gap: 0.4rem 1rem; padding: 0.5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row dt { font-size: 0.82rem; font-weight: 500; color: var(--faint); padding-top: 0.05rem; }
+    .contact-row dd { font-size: 0.95rem; }
+    .contact-row dd a {
+      color: var(--text); text-decoration: none;
+      transition: color 0.18s ease; word-break: break-word;
+    }
+    .contact-row dd a:hover { color: var(--accent); }
+    .orcid-id { display: inline-flex; align-items: center; gap: 0.42rem; }
+    .orcid-id svg { flex-shrink: 0; }
+
+    /* ── Rodapé ──────────────────────────────── */
+    footer {
+      margin-top: 4rem; padding-top: 1.6rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8rem; color: var(--faint);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    }
+    footer a { color: var(--faint); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+    footer a:hover { border-bottom-color: var(--faint); }
+
+    /* ── Responsivo ──────────────────────────── */
+    @media (max-width: 540px) {
+      .page { padding: 4rem 1.35rem 4.5rem; }
+      .hero { gap: 1.15rem; }
+      .avatar { width: 84px; height: 84px; }
+      .name { font-size: 2.1rem; }
+      .intro { font-size: 0.94rem; margin-top: 1.4rem; }
+      .cv { flex-direction: column; align-items: flex-start; }
+      .cv-btns { width: 100%; }
+      .btn { flex: 1; text-align: center; }
+      .section { margin-top: 2.6rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+    /* ── Formação ────────────────────────────── */
+    .edu-list { list-style: none; margin-top: 0.4rem; }
+    .edu {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 1rem; padding: 0.9rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .edu:last-child { border-bottom: none; }
+    .edu-main { display: flex; flex-direction: column; gap: 0.18rem; min-width: 0; }
+    .edu-title { font-size: 0.97rem; font-weight: 500; color: var(--text); line-height: 1.4; }
+    .edu-inst { font-size: 0.87rem; color: var(--muted); line-height: 1.45; }
+    .edu-yr {
+      flex-shrink: 0; font-size: 0.78rem; font-weight: 500;
+      color: var(--muted); white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      margin-top: 0.15rem;
+    }
+
+    /* ── Imagens de portfólio ──────────────── */
+    figure.img-block {
+      margin-top: 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface);
+      position: relative;
+    }
+    figure.img-block::after {
+      content: "";
+      position: absolute; inset: 0;
+      cursor: default;
+    }
+    figure.img-block a.img-link {
+      display: block; text-decoration: none;
+    }
+    figure.img-block img {
+      display: block;
+      max-width: 100%;
+      max-height: 240px;
+      width: auto;
+      height: auto;
+      margin: 1rem auto;
+      border-bottom: 1px solid var(--border);
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+    }
+    .img-placeholder {
+      width: 100%; aspect-ratio: 16/9;
+      background: var(--rule);
+      border-bottom: 1px dashed var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; color: var(--faint); font-style: italic;
+      text-align: center; padding: 1rem;
+      transition: background 0.18s ease;
+    }
+    figure.img-block a.img-link:hover .img-placeholder {
+      background: var(--accent-soft);
+    }
+    .img-caption {
+      padding: 0.65rem 1rem;
+      font-size: 0.84rem; color: var(--muted);
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .img-caption strong { font-weight: 500; color: var(--text); }
+    .img-ext {
+      font-size: 0.82rem; font-weight: 500; color: var(--accent);
+      text-decoration: none; white-space: nowrap; flex-shrink: 0;
+      transition: opacity 0.18s ease;
+    }
+    .img-ext:hover { opacity: 0.7; }
+  </style>
+</head>
+<body>
+
+  <div class="langtoggle" role="group" aria-label="Idioma / Language">
+    <button type="button" data-set="pt" aria-pressed="true" title="Português">PT</button>
+    <button type="button" data-set="en" aria-pressed="false" title="English">EN</button>
+  </div>
+
+  <div class="page">
+
+    <nav class="topnav" aria-label="Seções">
+      <a href="#pesquisa"><span lang="pt">Pesquisa</span><span lang="en">Research</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="#profissional"><span lang="pt">Profissional</span><span lang="en">Practice</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="#ensino"><span lang="pt">Ensino</span><span lang="en">Teaching</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="#escrita"><span lang="pt">Escrita</span><span lang="en">Writing</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="#formacao"><span lang="pt">Formação</span><span lang="en">Education</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="#materiais"><span lang="pt">Materiais</span><span lang="en">Materials</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="#contato"><span lang="pt">Contato</span><span lang="en">Contact</span></a><span class="sep" aria-hidden="true"></span>
+      <a href="https://lattes.cnpq.br/4222571811813236" target="_blank" rel="noopener"><span lang="pt">Currículo</span><span lang="en">CV</span></a>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1 class="name">Gabriela Vieira dos Santos</h1>
+        <p class="role">
+          <strong><span lang="pt">Doutoranda em Ciências Contábeis</span><span lang="en">Doctoral Researcher in Accounting</span></strong><br>
+          <span lang="pt">Universidade Federal de Santa Catarina (UFSC)</span><span lang="en">Federal University of Santa Catarina (UFSC)</span>
+        </p>
+      </div>
+      <img class="avatar" src="assets/foto.jpg" alt="Gabriela Vieira dos Santos" width="108" height="108">
+    </header>
+
+    <p class="intro" lang="pt">
+      Doutoranda em Ciências Contábeis na Universidade Federal de Santa Catarina (UFSC), investiga a <span class="hl">modernização tecnológica da governança tributária</span> e seus efeitos sobre as organizações e a profissão contábil.
+    </p>
+    <p class="intro" lang="en">
+      A doctoral researcher in Accounting at the Federal University of Santa Catarina (UFSC), she investigates the <span class="hl">technological modernization of tax governance</span> and its effects on the firms and accounting profession.
+    </p>
+
+    <section class="section" id="pesquisa">
+      <p class="kicker"><span lang="pt">Pesquisa</span><span lang="en">Research</span></p>
+
+      <p class="subhead"><span lang="pt">Linhas de pesquisa em andamento</span><span lang="en">Current research lines</span></p>
+      <ul class="lines">
+        <li><span lang="pt">Governança Tributária &amp; Embedded Tax Compliance</span><span lang="en">Tax Governance &amp; Embedded Tax Compliance</span></li>
+        <li><span lang="pt">Impactos Tecnológicos da Reforma Tributária do Consumo (IBS/CBS/IS)</span><span lang="en">Technological Impacts of Brazil's Consumption Tax Reform (IBS/CBS/IS)</span></li>
+        <li><span lang="pt">IA e Metodologias Ativas na Educação Contábil</span><span lang="en">AI and Active Learning in Accounting Education</span></li>
+      </ul>
+
+    </section>
+
+    <section class="section" id="profissional">
+      <p class="kicker"><span lang="pt">Profissional</span><span lang="en">Practice</span></p>
+      <p class="body" lang="pt">
+        <strong>Analista Funcional Sênior (Engenharia de Plataforma SAP)</strong> · Synchro · desde 2020.
+      </p>
+      <p class="body" lang="en">
+        <strong>Senior Functional Analyst (SAP Platform Engineering)</strong> · Synchro · since 2020.
+      </p>
+      <ul class="topics">
+        <li lang="pt"><strong>Pesquisa &amp; Produto:</strong> atuação no ciclo de ponta a ponta (concepção, discovery, OKRs, especificação e entrega) de novas soluções fiscais.</li>
+        <li lang="en"><strong>Research &amp; Product:</strong> end-to-end ownership (conception, discovery, OKRs, specification, and delivery) of new tax solutions.</li>
+        <li lang="pt"><strong>Conformidade Tributária:</strong> responsável pelo módulo da Reforma Tributária do Consumo (CBS/IBS/IS, LC 214/2025, EC 132/2023) no Synchro4TDF (complementar ao SAP TDF), traduzindo a complexidade legal para a arquitetura do sistema. Gerencia e planeja o backlog do produto, definindo prioridades com base em objetivos de negócio e necessidades dos clientes.</li>
+        <li lang="en"><strong>Tax Compliance:</strong> owner of the module for Brazil's consumption tax reform (CBS/IBS/IS, LC 214/2025, EC 132/2023) in Synchro4TDF (a complement to SAP TDF), translating legal complexity into system architecture. I manage the product backlog and set priorities based on business objectives and client needs.</li>
+      </ul>
+
+      <a class="more" href="https://www.linkedin.com/in/gabrielasantos2608/" target="_blank" rel="noopener"><span lang="pt">Ver atuação profissional</span><span lang="en">See work history</span> <span class="arr">→</span></a>
+    </section>
+
+    <section class="section" id="ensino">
+      <p class="kicker"><span lang="pt">Ensino</span><span lang="en">Teaching</span></p>
+      <p class="body" lang="pt">
+        Atuei como Docente para turmas de graduação em Ciências Contábeis (análise de custos, contabilidade intermediária e avançada, práticas contábeis e planejamento financeiro), adotando metodologias ativas de aprendizagem como abordagem didática.
+      </p>
+      <p class="body" lang="en">
+        I taught undergraduate Accounting classes (cost analysis, intermediate and advanced accounting, accounting practices, and financial planning), drawing on active-learning pedagogies as my primary teaching approach.
+      </p>
+      <a class="more" href="https://lattes.cnpq.br/4222571811813236" target="_blank" rel="noopener"><span lang="pt">Ver atuação profissional</span><span lang="en">See work history</span> <span class="arr">→</span></a>
+    </section>
+
+    <section class="section" id="escrita">
+      <p class="kicker"><span lang="pt">Escrita</span><span lang="en">Writing</span></p>
+      <p class="body" lang="pt">
+        Notas e textos curtos sobre informação tributária, reforma do consumo e ensino da contabilidade. Em construção; os primeiros textos chegam em breve.
+      </p>
+      <p class="body" lang="en">
+        Short notes and essays on tax information, consumption tax reform, and accounting education. Under construction — first posts coming soon.
+      </p>
+      <a class="more muted" href="blog.html"><span lang="pt">Visitar o espaço de escrita</span><span lang="en">Read the notes</span> <span class="arr">→</span></a>
+    </section>
+
+    <section class="section" id="formacao">
+      <p class="kicker"><span lang="pt">Formação</span><span lang="en">Education</span></p>
+      <ul class="edu-list">
+        <li class="edu">
+          <div class="edu-main">
+            <span class="edu-title"><span lang="pt">Doutorado em Ciências Contábeis</span><span lang="en">Ph.D. in Accounting</span></span>
+            <span class="edu-inst"><span lang="pt">Universidade Federal de Santa Catarina (UFSC) · em andamento</span><span lang="en">Federal University of Santa Catarina (UFSC) · in progress</span></span>
+          </div>
+          <span class="edu-yr">2025–</span>
+        </li>
+        <li class="edu">
+          <div class="edu-main">
+            <span class="edu-title"><span lang="pt">Especialização em Gestão Pública</span><span lang="en">Graduate Specialization in Public Management</span></span>
+            <span class="edu-inst"><span lang="pt">Universidade Federal do Vale do São Francisco (UNIVASF) · 400h</span><span lang="en">Federal University of Vale do São Francisco (UNIVASF) · 400h</span></span>
+          </div>
+          <span class="edu-yr">2018</span>
+        </li>
+        <li class="edu">
+          <div class="edu-main">
+            <span class="edu-title"><span lang="pt">Mestrado em Ciência da Informação</span><span lang="en">M.Sc. in Information Science</span></span>
+            <span class="edu-inst"><span lang="pt">Universidade Federal da Bahia (UFBA)</span><span lang="en">Federal University of Bahia (UFBA)</span></span>
+          </div>
+          <span class="edu-yr">2016</span>
+        </li>
+        <li class="edu">
+          <div class="edu-main">
+            <span class="edu-title"><span lang="pt">Graduação em Ciências Contábeis</span><span lang="en">B.Sc. in Accounting</span></span>
+            <span class="edu-inst"><span lang="pt">Universidade Federal da Bahia (UFBA)</span><span lang="en">Federal University of Bahia (UFBA)</span></span>
+          </div>
+          <span class="edu-yr">2010</span>
+        </li>
+      </ul>
+      <a class="more" href="https://lattes.cnpq.br/4222571811813236" target="_blank" rel="noopener"><span lang="pt">Ver formação acadêmica completa</span><span lang="en">See full academic background</span> <span class="arr">→</span></a>
+    </section>
+
+    <section class="section" id="materiais">
+      <p class="kicker"><span lang="pt">Materiais e Atividades</span><span lang="en">Materials &amp; Activities</span></p>
+      <ul class="mat-list">
+        <li class="mat">
+          <div class="mat-main">
+            <span class="mat-title">Jornada de Apuração IBS e CBS</span>
+            <span class="mat-desc"><span lang="pt">Material didático e treinamento sobre a Reforma Tributária do Consumo · Synchro</span><span lang="en">Training material on Brazil's consumption tax reform · Synchro</span></span>
+          </div>
+          <span class="mat-tag">2026</span>
+        </li>
+        <li class="mat">
+          <div class="mat-main">
+            <span class="mat-title"><span lang="pt">Metodologias ativas no ensino da contabilidade</span><span lang="en">Active learning in accounting education</span></span>
+            <span class="mat-desc"><span lang="pt">Oficinas e materiais sobre métodos ativos aplicados à sala de aula</span><span lang="en">Workshops and materials on active methods applied to the classroom</span></span>
+          </div>
+          <span class="mat-tag"><span lang="pt">Oficina</span><span lang="en">Workshop</span></span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section contact-sec" id="contato">
+      <p class="kicker"><span lang="pt">Contato</span><span lang="en">Contact</span></p>
+      <dl class="contact-list">
+        <div class="contact-row">
+          <dt>Email</dt>
+          <dd><a href="mailto:gabriela.santos@posgrad.ufsc.br">gabriela.santos@posgrad.ufsc.br</a></dd>
+        </div>
+        <div class="contact-row">
+          <dt>LinkedIn</dt>
+          <dd><a href="https://www.linkedin.com/in/gabrielasantos2608/" target="_blank" rel="noopener">linkedin.com/in/gabrielasantos2608/</a></dd>
+        </div>
+        <div class="contact-row">
+          <dt>Lattes</dt>
+          <dd><a href="https://lattes.cnpq.br/4222571811813236" target="_blank" rel="noopener">lattes.cnpq.br/4222571811813236</a></dd>
+        </div>
+        <div class="contact-row">
+          <dt>ORCID</dt>
+          <dd><a class="orcid-id" href="https://orcid.org/0000-0003-4603-1075" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1S68.5 62.3 68.5 56.8c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z"/></svg>0000-0003-4603-1075</a></dd>
+        </div>
+      </dl>
+    </section>
+
+    <footer>
+      <span>
+        <span lang="pt">Última atualização: junho de 2026</span>
+        <span lang="en">Last updated: June 2026</span>
+      </span>
+      <a href="https://lattes.cnpq.br/4222571811813236" target="_blank" rel="noopener"><span lang="pt">Currículo Lattes</span><span lang="en">Lattes CV</span></a>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btns = Array.prototype.slice.call(document.querySelectorAll('.langtoggle button'));
+      function apply(lang) {
+        if (lang !== 'en') lang = 'pt';
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang === 'en' ? 'en' : 'pt-BR');
+        btns.forEach(function (b) {
+          var on = b.getAttribute('data-set') === lang;
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          b.style.background = on ? 'var(--accent)' : 'transparent';
+          b.style.color = on ? '#fff' : '';
+        });
+        try { localStorage.setItem('gvs-lang', lang); } catch (e) {}
+        document.querySelectorAll('a[href^="cv.html"]').forEach(function (a) {
+          a.setAttribute('href', a.getAttribute('href').replace(/lang=(pt|en)/, 'lang=' + lang));
+        });
+      }
+      btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-set')); }); });
+      apply(root.getAttribute('data-lang') || 'pt');
+    })();
+  </script>
+
+</body>
+</html>

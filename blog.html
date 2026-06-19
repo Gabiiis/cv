@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escrita · Gabriela Vieira dos Santos</title>
+  <meta name="description" content="Notas e textos de Gabriela Vieira dos Santos sobre informação tributária, reforma do consumo e ensino da contabilidade.">
+  <link rel="canonical" href="https://gabrielavs.github.io/blog.html">
+
+  <script>
+    (function () {
+      try {
+        var u = '';
+        try { u = (new URLSearchParams(location.search)).get('lang') || location.hash.replace('#', ''); } catch (e) {}
+        var l = (u === 'en' || u === 'pt') ? u : localStorage.getItem('gvs-lang');
+        if (l === 'en' || l === 'pt') {
+          document.documentElement.setAttribute('data-lang', l);
+          document.documentElement.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --bg:       #FBFAF8;
+      --surface:  #FFFFFF;
+      --text:     #1A1A18;
+      --muted:    #5F5C56;
+      --faint:    #8E8B84;
+      --accent:   #1F5BC4;
+      --accent-soft: #EEF2FB;
+      --border:   #EAE7DF;
+      --rule:     #F0EDE6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#100F0E; --surface:#1A1916; --text:#EDEAE3; --muted:#A8A49C; --faint:#77746C;
+        --accent:#7FA9F0; --accent-soft:#1B2436; --border:#2A2824; --rule:#221F1B;
+      }
+    }
+
+    html { -webkit-text-size-adjust: 100%; }
+    html[data-lang="en"] [lang="pt"] { display: none !important; }
+    html[data-lang="pt"] [lang="en"] { display: none !important; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg); color: var(--text);
+      font-size: 16px; line-height: 1.65;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .page { max-width: 640px; margin: 0 auto; padding: 4rem 1.75rem 6rem; }
+
+    .langtoggle {
+      position: fixed; top: 1.15rem; right: 1.15rem;
+      display: flex; gap: 2px; padding: 3px;
+      font-size: 0.72rem; font-weight: 500;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 9px; z-index: 30; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .langtoggle button {
+      font: inherit; border: none; background: transparent; color: var(--faint);
+      padding: 0.3rem 0.62rem; border-radius: 6px; cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+    .langtoggle button:hover { color: var(--text); }
+
+    .back {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.86rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; margin-bottom: 2.4rem;
+      transition: color 0.18s ease;
+    }
+    .back:hover { color: var(--accent); }
+
+    .title { font-family: var(--serif); font-size: 2.1rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.14; }
+    .lede { font-size: 1.1rem; color: var(--muted); margin-top: 0.8rem; max-width: 48ch; text-align: justify; hyphens: auto; }
+
+    /* Estado vazio / em breve */
+    .empty {
+      margin-top: 2.6rem; padding: 2.4rem 1.6rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; text-align: center;
+    }
+    .empty .dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--accent); display: inline-block; margin-bottom: 0.9rem;
+      box-shadow: 0 0 0 5px var(--accent-soft);
+    }
+    .empty h2 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; }
+    .empty p { font-size: 0.96rem; color: var(--muted); margin-top: 0.5rem; max-width: 40ch; margin-left: auto; margin-right: auto; }
+
+    /* Modelo de post (oculto) · duplique para publicar:
+       <article class="post">
+         <p class="post-date">Mês de 2026</p>
+         <h3 class="post-title"><a href="#">Título do texto</a></h3>
+         <p class="post-excerpt">Resumo de uma ou duas linhas…</p>
+       </article>
+    -->
+    .posts { margin-top: 2.4rem; display: flex; flex-direction: column; gap: 0; }
+    .post { padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+    .post:first-child { border-top: none; }
+    .post-date { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); }
+    .post-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; margin-top: 0.3rem; line-height: 1.25; }
+    .post-title a { color: var(--text); text-decoration: none; transition: color 0.18s ease; }
+    .post-title a:hover { color: var(--accent); }
+    .post-excerpt { font-size: 0.98rem; color: var(--muted); margin-top: 0.5rem; max-width: 54ch; text-align: justify; hyphens: auto; }
+
+    footer {
+      margin-top: 4rem; padding-top: 1.6rem; border-top: 1px solid var(--rule);
+      font-size: 0.8rem; color: var(--faint);
+    }
+    footer a { color: var(--faint); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+    footer a:hover { border-bottom-color: var(--faint); }
+
+    @media (max-width: 540px) {
+      .page { padding: 3.2rem 1.35rem 4.5rem; }
+      .title { font-size: 1.95rem; }
+      .langtoggle { top: 0.7rem; right: 0.7rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+  <div class="langtoggle" role="group" aria-label="Idioma / Language">
+    <button type="button" data-set="pt" aria-pressed="true" title="Português">PT</button>
+    <button type="button" data-set="en" aria-pressed="false" title="English">EN</button>
+  </div>
+
+  <div class="page">
+
+    <a class="back" href="index.html">← <span lang="pt">Início</span><span lang="en">Home</span></a>
+
+    <h1 class="title"><span lang="pt">Escrita</span><span lang="en">Writing</span></h1>
+    <p class="lede" lang="pt">Notas e textos curtos sobre informação tributária, reforma do consumo (IBS/CBS) e o ensino da contabilidade.</p>
+    <p class="lede" lang="en">Short notes and essays on tax information, the consumption tax reform (IBS/CBS), and accounting education.</p>
+
+    <!-- ESTADO ATUAL: em breve. Quando publicar, remova este bloco .empty
+         e preencha .posts com artigos no modelo comentado acima. -->
+    <div class="empty">
+      <span class="dot" aria-hidden="true"></span>
+      <h2><span lang="pt">Em breve</span><span lang="en">Coming soon</span></h2>
+      <p>
+        <span lang="pt">Este espaço está em construção. Os primeiros textos chegam em breve.</span>
+        <span lang="en">This space is under construction. The first posts are on the way.</span>
+      </p>
+    </div>
+
+    <!-- Quando houver textos, troque o bloco acima por:
+    <div class="posts">
+      <article class="post">
+        <p class="post-date">Maio de 2026</p>
+        <h3 class="post-title"><a href="#">Título do texto</a></h3>
+        <p class="post-excerpt">Resumo de uma ou duas linhas que convida à leitura.</p>
+      </article>
+    </div>
+    -->
+
+    <footer>
+      <a href="index.html"><span lang="pt">Voltar ao início</span><span lang="en">Back to home</span></a>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btns = Array.prototype.slice.call(document.querySelectorAll('.langtoggle button'));
+      function apply(lang) {
+        if (lang !== 'en') lang = 'pt';
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang === 'en' ? 'en' : 'pt-BR');
+        btns.forEach(function (b) {
+          var on = b.getAttribute('data-set') === lang;
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          b.style.background = on ? 'var(--accent)' : 'transparent';
+          b.style.color = on ? '#fff' : '';
+        });
+        try { localStorage.setItem('gvs-lang', lang); } catch (e) {}
+      }
+      btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-set')); }); });
+      apply(root.getAttribute('data-lang') || 'pt');
+    })();
+  </script>
+
+</body>
+</html>
